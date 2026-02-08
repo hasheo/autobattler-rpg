@@ -1,0 +1,10 @@
+{
+  "name": "autobattler-rpg",
+  "version": "1.0.0",
+  "description": "10-day autobattler RPG simulation in JavaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/smoke.test.js"
+  }
+}

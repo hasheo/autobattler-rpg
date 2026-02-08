@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autobattler RPG Online Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #0f172a; color: #e2e8f0; }
+    button { padding: 10px 14px; border-radius: 8px; border: 0; background: #2563eb; color: white; cursor: pointer; }
+    pre { background: #111827; padding: 12px; border-radius: 8px; max-height: 70vh; overflow: auto; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Autobattler RPG (Online Demo)</h1>
+  <p>Click Run to simulate a full 10-day campaign in your browser.</p>
+  <button id="run-btn">Run Simulation</button>
+  <pre id="output">Ready.</pre>
+
+  <script src="./app.js"></script>
+  <script>
+    const out = document.getElementById('output');
+    document.getElementById('run-btn').addEventListener('click', () => {
+      const lines = [];
+      window.Autobattler.runGame((line) => lines.push(line));
+      out.textContent = lines.join('\n');
+    });
+  </script>
+</body>
+</html>
